@@ -37,10 +37,11 @@ function scrollHeader() {
     if (this.scrollY >= 100) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
+const videoFile = document.getElementById('video-file');
+
 window.addEventListener('scroll', scrollVideo)
 
 function scrollVideo() {
-    console.log('scrollY', this.scrollY)
     if (this.scrollY >= 1960 && this.scrollY <= 3000) {
         playVideo()
     } else {
@@ -49,7 +50,6 @@ function scrollVideo() {
 }
 
 function playVideo() {
-    const videoFile = document.getElementById('video-file');
     videoFile.play()
 }
 
