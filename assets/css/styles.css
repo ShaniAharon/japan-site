@@ -590,6 +590,7 @@ input {
 .place__card {
   position: relative;
   overflow: var(--img-hidden);
+  text-shadow: 0 0 4px black;
 }
 
 .place__card:hover .place__img {
@@ -655,6 +656,10 @@ input {
   right: 0;
   bottom: 0;
   padding: 0.75rem 1rem;
+}
+
+.img-grid-item {
+  width: 175px;
 }
 
 /*=============== SUBSCRIBE ===============*/

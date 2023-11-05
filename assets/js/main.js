@@ -36,21 +36,27 @@ function scrollHeader() {
     // When the scroll is greater than 100 viewport height, add the scroll-header class to the header tag
     if (this.scrollY >= 100) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
 }
+
 window.addEventListener('scroll', scrollHeader)
 const videoFile = document.getElementById('video-file');
-
 window.addEventListener('scroll', scrollVideo)
+
+
 
 function scrollVideo() {
     if (this.scrollY >= 1960 && this.scrollY <= 3000) {
-        playVideo()
+        playVideo(videoFile)
     } else {
         videoFile.pause();
     }
 }
 
-function playVideo() {
-    videoFile.play()
+function playVideo(videoEl) {
+    videoEl.play()
+}
+
+function stopVideo(videoEl) {
+    videoEl.pause()
 }
 
 /*==================== SWIPER DISCOVER ====================*/
